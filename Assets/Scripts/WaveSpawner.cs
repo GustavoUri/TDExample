@@ -17,8 +17,7 @@ public class WaveSpawner : MonoBehaviour
     {
         
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (countdown <= 0f)
@@ -26,7 +25,7 @@ public class WaveSpawner : MonoBehaviour
             StartCoroutine(SpawnWave());
             countdown = timeBetweenWaves;
         }
-
+    
         CountdownText.text = Mathf.Floor(countdown).ToString();
         countdown -= Time.deltaTime;
     }
